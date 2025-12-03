@@ -74,7 +74,7 @@ class _SignInState extends State<SignIn> {
                                   size: 19,
                                 ),
                               ),
-                              AppButton(onTap: () {}),
+                              AppButton(onTap: () {}, buttonText: " Sign In",),
                               RichText(
                                 text: TextSpan(
                                   text: "Don't have an account? ",

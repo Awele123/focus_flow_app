@@ -83,7 +83,7 @@ class _SignupState extends State<Signup> {
                                   color: Colors.white,
                                 ),
                               ),
-                              AppButton(onTap: () {}, buttonText: "SignUp",),
+                              AppButton(onTap: () {}, buttonText: "Create Account",),
                               RichText(
                                 text: TextSpan(
                                   text: "Already have an account? ",
