@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:focus_flow_app/pages/bottomnav.dart';
+import 'package:focus_flow_app/widgets/bottomnav.dart';
 import 'package:focus_flow_app/pages/home_page.dart';
 import 'package:focus_flow_app/pages/onboard.dart';
 import 'package:focus_flow_app/pages/signin.dart';

@@ -3,43 +3,35 @@ import 'package:focus_flow_app/global-widgets/app_text.dart';
 import 'package:focus_flow_app/widgets/streak_card.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 class StreakScreen extends StatelessWidget {
   const StreakScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-       final size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
     return Scaffold(
-       backgroundColor: Color(0x0f0B1E),
+      backgroundColor: Color(0x000f0b1e),
       body: SafeArea(
         child: Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-      SizedBox(height: size.width * 0.02),
-      
-               CustomText(
-                text:'Your Streak',
-              
-                  fontSize: 28,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                
+              SizedBox(height: size.width * 0.02),
+              CustomText(
+                text: 'Your Streak',
+                fontSize: 28,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
               ),
-           // SizedBox(height: size.width * 0.02),
-               CustomText(
-              text:   'Keep the momentum going!',
-               
-                  fontSize: 14,
-                  color: Colors.white60,
-                
+              // SizedBox(height: size.width * 0.02),
+              CustomText(
+                text: 'Keep the momentum going!',
+
+                fontSize: 14,
+                color: Colors.white60,
               ),
-      
-               SizedBox(height: size.width * 0.1),
-      
-            
+              SizedBox(height: size.width * 0.1),
               StreakCard(
                 hasFireIcon: true,
                 borderRadius: 24,
@@ -48,131 +40,126 @@ class StreakScreen extends StatelessWidget {
                   horizontal: 20,
                 ),
                 child: Column(
-                  children:  [
+                  children: [
                     FaIcon(
                       FontAwesomeIcons.fireFlameCurved,
                       color: Colors.purple,
                       size: 50,
-                      
                       fontWeight: FontWeight.w900,
                     ),
-                      SizedBox(height: size.width * 0.02),
+                    SizedBox(height: size.width * 0.02),
                     CustomText(
-                    text:   '0',
-                  
-                        fontSize: 64,
-                        fontWeight: FontWeight.bold,
-                       color: Colors.purple,
-                      
+                      text: '0',
+                      fontSize: 64,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.purple,
                     ),
-                      SizedBox(height: size.width * 0.01),
+                    SizedBox(height: size.width * 0.01),
                     CustomText(
-                     text:  'Day Streak',
-                    
-                        fontSize: 20,
-                        fontWeight: FontWeight.w900,
-                        color: Color.fromARGB(255, 255, 255, 255),
-                      
+                      text: 'Day Streak',
+                      fontSize: 22,
+                      fontWeight: FontWeight.w900,
+                      color: Color.fromARGB(255, 255, 255, 255),
                     ),
-                   SizedBox(height: size.width * 0.02),
+                    SizedBox(height: size.width * 0.02),
                     CustomText(
-                    text:   'Complete a focus session to start your streak!',
+                      text: 'Complete a focus session to start your streak!',
                       textAlign: TextAlign.center,
-                      
-                        fontSize: 14,
-                        color: Colors.white60,
-                      
+                      fontSize: 14,
+                      color: const Color.fromARGB(255, 187, 125, 198),
                     ),
                   ],
                 ),
               ),
-      
               SizedBox(height: size.width * 0.057),
-      
-            
               StreakCard(
-                child: Row(
+                child: Column(
                   children: [
-                    Container(
-                      width: 48,
-                      height: 48,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: const Color(0xFF8F5CFF).withOpacity(0.15),
-                      ),
-                      child: const Icon(
-                        Icons.emoji_events_rounded,
-                        color: Color(0xFF8F5CFF),
-                      ),
+                    Row(
+                      children: [
+                        Container(
+                          width: size.width * 0.12,
+                          height: size.width * 0.12,
+
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.purple),
+                            shape: BoxShape.circle,
+                            color: Colors.transparent,
+                          ),
+                          child: const Icon(
+                            Icons.emoji_events_outlined,
+                            color: Colors.purple,
+                            size: 30,
+                          ),
+                        ),
+                        SizedBox(width: size.width * 0.04),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CustomText(
+                              text: 'Longest Streak',
+                              color: const Color.fromARGB(255, 187, 125, 198),
+                              fontSize: 14,
+                            ),
+                            SizedBox(height: 2),
+                            CustomText(
+                              text: '0 days',
+                              fontSize: 25,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                            ),
+                            SizedBox(height: size.width * 0.026),
+                          ],
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: 12),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Longest Streak',
-                          style: TextStyle(
-                            color: Colors.white70,
-                            fontSize: 14,
-                          ),
-                        ),
-                        SizedBox(height: 2),
-                        Text(
-                          '0 days',
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          'Your longest streak will appear here',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.white38,
-                          ),
+                    Row(
+                      children: [
+                        CustomText(
+                          text: 'Your longest streak will appear here',
+                          fontSize: 15,
+                          color: const Color.fromARGB(255, 187, 125, 198),
                         ),
                       ],
                     ),
                   ],
                 ),
               ),
-      
-              const SizedBox(height: 24),
-      
-              /// Pro tip
+              SizedBox(height: size.width * 0.05),
               StreakCard(
                 hasLeftAccent: true,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Icon(
-                      Icons.lightbulb_outline_rounded,
-                      color: Color(0xFF8F5CFF),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children:  [
+                        Icon(
+                          Icons.lightbulb_outline_rounded,
+                          color: Color.fromARGB(255, 239, 236, 245),
+                        ),
+                       SizedBox(width: size.width * 0.02),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CustomText(
+                                text: 'Pro Tip',
+                                color: Colors.purple,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
+                              ),
+                              SizedBox(height: 6),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    SizedBox(width: 10),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Pro Tip',
-                            style: TextStyle(
-                              color: Color(0xFF8F5CFF),
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(height: 6),
-                          Text(
-                            'Complete at least one 25-minute focus session each day to maintain your streak!',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ],
-                      ),
+                    CustomText(
+                      text:
+                          'Complete at least one 25-minute focus session each day to maintain your streak!',
+
+                      fontSize: 13,
+                      color: const Color.fromARGB(255, 187, 125, 198),
                     ),
                   ],
                 ),
@@ -181,8 +168,6 @@ class StreakScreen extends StatelessWidget {
           ),
         ),
       ),
-
-      
     );
   }
 }

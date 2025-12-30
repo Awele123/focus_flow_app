@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:focus_flow_app/global-widgets/app_text.dart';
-import 'package:focus_flow_app/global-widgets/app_text_field.dart';
-import 'package:focus_flow_app/widgets/app_bar_container.dart';
-import 'package:flutter/material.dart';
 
 class TaskScreen extends StatelessWidget {
   const TaskScreen({super.key});
@@ -19,22 +16,17 @@ class TaskScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: size.width * 0.02),
-
               CustomText(
                 text: 'Tasks',
-
                 fontSize: 28,
                 fontWeight: FontWeight.w600,
                 color: Colors.white,
               ),
-
               CustomText(
                 text: '0 active tasks',
-
                 fontSize: 14,
                 color: Colors.purple,
               ),
-
     SizedBox(height: size.width* 0.08),
               Container(
                 padding: const EdgeInsets.all(16),
@@ -42,10 +34,8 @@ class TaskScreen extends StatelessWidget {
                   color: Colors.transparent,
                   border: Border.all(
                     color: Colors.purple
-                  ),
-                 
-                  borderRadius: BorderRadius.circular(16),
-                 
+                  ),     
+                  borderRadius: BorderRadius.circular(16),     
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

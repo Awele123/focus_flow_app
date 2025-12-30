@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:focus_flow_app/global-widgets/app_button.dart';
+import 'package:focus_flow_app/widgets/auth_button.dart';
 import 'package:focus_flow_app/global-widgets/app_text.dart';
 
 
@@ -25,7 +25,7 @@ class _OnboardState extends State<Onboard> {
         backgroundColor: Colors.transparent,
         bottomNavigationBar: Padding(
           padding:  EdgeInsets.only(bottom: size.width*0.13, left: size.width*0.05, right: size.width*0.05),
-          child: AppButton(
+          child: AuthButton(
             onTap:(){
               Navigator.pushNamed(context, '/signUp');
             }

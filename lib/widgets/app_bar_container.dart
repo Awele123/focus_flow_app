@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:focus_flow_app/global-widgets/app_text.dart';
 
 // ignore: must_be_immutable
 class AppBarContainer extends StatelessWidget {
@@ -7,11 +8,12 @@ class AppBarContainer extends StatelessWidget {
     this.icon,
     this.width,
     this.radius,
-    this.isAppBar = true, this.height,
+    this.isAppBar = true, this.height, required this.child,
   });
   final Icon? icon;
   final double? width, height;
   bool isAppBar;
+    final Widget child;
   final BorderRadiusGeometry? radius;
   @override
   Widget build(BuildContext context) {
@@ -26,17 +28,8 @@ class AppBarContainer extends StatelessWidget {
         borderRadius: radius ?? BorderRadius.circular(10),
         color: Colors.transparent,
       ),
-      child:
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              icon ??
-              Icon(
-                Icons.info_outline_rounded,
-                color: const Color.fromARGB(255, 170, 38, 193),
-              ),
-            ],
-          ),
+      child: child
+          
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:focus_flow_app/global-widgets/app_button.dart';
+import 'package:focus_flow_app/widgets/auth_button.dart';
 import 'package:focus_flow_app/global-widgets/app_text.dart';
 import 'package:focus_flow_app/global-widgets/app_text_field.dart';
 import 'package:focus_flow_app/pages/home_page.dart';
@@ -75,7 +75,7 @@ class _SignInState extends State<SignIn> {
                                   size: 19,
                                 ),
                               ),
-                              AppButton(onTap: () {
+                              AuthButton(onTap: () {
                                Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=> HomePage()));
                               }, buttonText: " Sign In",),
                               RichText(

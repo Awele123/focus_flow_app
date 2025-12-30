@@ -18,30 +18,38 @@ class Sounds extends StatelessWidget {
         AppBarContainer(
         radius: BorderRadius.circular(50),
          width: size.width * 0.2,
-      
-          icon: FaIcon(
-         FontAwesomeIcons.cloudRain,
-         color: Colors.purple,
-         size: 30,
+      child: 
+          Center(
+            child: FaIcon(
+                     FontAwesomeIcons.cloudRain,
+                     color: Colors.purple,
+                     size: 30,
+            ),
           ),
         
         ),
         AppBarContainer(
           width: size.width * 0.2,
       radius: BorderRadius.circular(50),
-          icon: Icon(
-            Icons.waves,
-            size: 30,
-            color: Colors.purple
-          ),
+      child: 
+           Center(
+             child: Icon(
+              Icons.waves,
+              size: 30,
+              color: Colors.purple
+                       ),
+           ),
         ),
         AppBarContainer(
             radius: BorderRadius.circular(50),
           width: size.width * 0.2,
-          icon: FaIcon(
-           FontAwesomeIcons.leaf,
-            size: 30,
-            color:  Colors.purple
+          child: 
+          Center(
+            child: FaIcon(
+             FontAwesomeIcons.leaf,
+              size: 30,
+              color:  Colors.purple
+            ),
           ),
         ),
       ],

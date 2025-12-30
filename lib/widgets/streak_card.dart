@@ -18,7 +18,7 @@ class StreakCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-       final size = MediaQuery.of(context).size;
+      // final size = MediaQuery.of(context).size;
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -27,15 +27,24 @@ class StreakCard extends StatelessWidget {
      
         border: hasFireIcon
             ? Border.all(
-                 color:  Color(0xFF8F5CFF).withOpacity(0.4),
+                 color:  Colors.purple,
                 width: 2,
               )
             : hasLeftAccent
                 ?  Border(
                     left: BorderSide(
-                      color: Color(0xFF8F5CFF),
-                      width: 4,
+                       color:  Colors.purple,
+                      width: 7,
                     ),
+                    top: BorderSide(
+                      color: Colors.purple
+                    ),
+                    bottom:  BorderSide(
+                      color: Colors.purple
+                    ),
+                    right:  BorderSide(
+                      color: Colors.purple
+                    )
                   )
                 : Border.all(
                   color: Colors.purple

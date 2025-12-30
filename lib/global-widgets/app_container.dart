@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:focus_flow_app/global-widgets/app_button.dart';
+import 'package:focus_flow_app/widgets/auth_button.dart';
 import 'package:focus_flow_app/global-widgets/app_text_field.dart';
 
 class AppContainer extends StatelessWidget {
@@ -47,7 +47,7 @@ class AppContainer extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          AppButton(onTap: () {
+          AuthButton(onTap: () {
             Navigator.pushNamed(context,  '/bottomNav',);
           }, buttonText: "Create Account",),
           RichText(
