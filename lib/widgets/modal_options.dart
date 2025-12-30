@@ -35,7 +35,7 @@ bool isText;
                   
                   child: 
                   CustomText( 
-                    text:"25m",)
+                    text: boxText?? "25m",)
               ),
             ],
           )

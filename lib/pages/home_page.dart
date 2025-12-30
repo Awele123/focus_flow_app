@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:focus_flow_app/global-widgets/app_text.dart';
 import 'package:focus_flow_app/global-widgets/app_button.dart';
 import 'package:focus_flow_app/widgets/app_bar_container.dart';
+import 'package:focus_flow_app/widgets/bottom_sheet.dart';
 import 'package:focus_flow_app/widgets/modal_options.dart';
 import 'package:focus_flow_app/widgets/sounds.dart';
 import 'package:focus_flow_app/widgets/timer.dart';
@@ -34,44 +35,15 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               showModalBottomSheet(
                 context: context,
+               // isScrollControlled: true,
+                backgroundColor: Colors.transparent,
+                shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.vertical(
+      top: Radius.circular(1),
+    ),
+  ) ,
                 builder: (context) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 101, 19, 115),
-                      // shape: BoxShape.circle
-                      // borderRadius: BorderRadius.circular(50)
-                    ),
-                    padding: const EdgeInsets.all(16),
-                    child: ListView(
-                      children: [
-                        Column(
-                          spacing: 10,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                CustomText(
-                                  text: "Timer Settings",
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w900,
-                                ),
-                              ],
-                            ),
-
-                            ModalOptions(),
-                            ModalOptions(heading: "Break"),
-                             AppButton(
-                          color: Colors.purple,
-                          text: "Reset",
-                          width: size.width * 0.3,
-                          fontSize: 19,
-                        ),
-                          ],
-                        ),
-                       
-                      ],
-                    ),
-                  );
+                  return BottomModalSheet(size: size);
                 },
               );
             },
@@ -101,10 +73,8 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   AppButton(
                     suffixIcon: true,
-
                     color: Colors.purple,
                     text: "Start",
-
                     width: size.width * 0.3,
                     fontSize: 19,
                   ),

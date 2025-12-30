@@ -13,12 +13,12 @@ class AppButton extends StatefulWidget {
     this.icon,
     this.color,
     this.fontWeight,
-    this.textColor, 
+    this.textColor, this.addIcon, 
   });
   final String? text;
   final double? fontSize, width;
 
-  final Icon? icon;
+  final Icon? icon,addIcon;
   final Color? color, textColor;
   bool hasIcon,suffixIcon;
   final FontWeight? fontWeight;
@@ -47,7 +47,10 @@ class _AppButtonState extends State<AppButton> {
                 spacing: 3,
                 mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    widget.suffixIcon ? Icon(Icons.play_arrow, color: Colors.white,) : SizedBox.shrink(),
+                    widget.suffixIcon ? 
+                    widget.addIcon ??
+                    Icon(Icons.play_arrow, color: Colors.white,) : SizedBox.shrink(),
+                    SizedBox(width: 6,),
                     CustomText(
                       text: widget.text ?? "Focus",
                       fontSize: widget.fontSize ?? 15,
