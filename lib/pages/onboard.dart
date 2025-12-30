@@ -32,24 +32,24 @@ class _OnboardState extends State<Onboard> {
              
           ),
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding:  EdgeInsets.only(left:  size.width*0.05, top: size.width*0.1),
-              child: Column(
-                children: [
-                  CustomText(
-                    text: "Welcome to FocusFlow",
-                    fontWeight: FontWeight.w500,
-                    fontSize: size.width * 0.10,
-                    color: Colors.white,
-                  ),
-                  Image(image: AssetImage("assets/robo.png")),
-                  CustomText(),
-                ],
+        body: Padding(
+          padding:  EdgeInsets.only(left:  size.width*0.05, top: size.width*0.1),
+          child: Column(
+            children: [
+              CustomText(
+                text: "Welcome to FocusFlow",
+                fontWeight: FontWeight.w500,
+                fontSize: size.width * 0.1,
+                color: Colors.white,
               ),
-            ),
-          ],
+              Image(
+                
+                image: AssetImage("assets/robo.png",), ),
+              CustomText(
+             
+              ),
+            ],
+          ),
         ),
       ),
     );

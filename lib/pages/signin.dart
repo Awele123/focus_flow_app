@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:focus_flow_app/global-widgets/app_button.dart';
 import 'package:focus_flow_app/global-widgets/app_text.dart';
 import 'package:focus_flow_app/global-widgets/app_text_field.dart';
+import 'package:focus_flow_app/pages/home_page.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -74,7 +75,9 @@ class _SignInState extends State<SignIn> {
                                   size: 19,
                                 ),
                               ),
-                              AppButton(onTap: () {}, buttonText: " Sign In",),
+                              AppButton(onTap: () {
+                               Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=> HomePage()));
+                              }, buttonText: " Sign In",),
                               RichText(
                                 text: TextSpan(
                                   text: "Don't have an account? ",
@@ -94,7 +97,7 @@ class _SignInState extends State<SignIn> {
                                         ..onTap = () {
                                           Navigator.pushNamed(
                                             context,
-                                            '/signUp',
+                                             '/bottomNav',
                                           );
                                         },
                                     ),
